@@ -31,17 +31,21 @@ function Header() {
       <div className="header__nav">
         <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="header__option">
-            // '?' User not loaded due t async so add ?
-            <span className="header_optionLineOne">Hello {user?.email}</span>
+            {/*  ? User not loaded due t async so add ? */}
+            <span className="header_optionLineOne">
+              Hello {!user ? "Guest" : user.email}
+            </span>
             <span className="header_optionLineTwo">
               {user ? "Sign Out" : "Sign In"}
             </span>
           </div>
         </Link>
-        <div className="header__option">
-          <span className="header_optionLineOne">Returns</span>
-          <span className="header_optionLineTwo">& Orders</span>
-        </div>
+        <Link to="/orders">
+          <div className="header__option">
+            <span className="header_optionLineOne">Returns</span>
+            <span className="header_optionLineTwo">& Orders</span>
+          </div>
+        </Link>
         <div className="header__option">
           <span className="header_optionLineOne">Your</span>
           <span className="header_optionLineTwo">Prime</span>
