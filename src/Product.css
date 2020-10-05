@@ -11,6 +11,11 @@
 
   background-color: white;
   z-index: 1;
+  transition: transform 450ms;
+}
+
+.product:hover {
+  transform: scale(1.04);
 }
 
 .product__rating {
@@ -25,6 +30,7 @@
 }
 
 .product > button {
+  cursor: pointer;
   background: #f0c14b;
   border: 1px solid;
   margin-top: 10px;

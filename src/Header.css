@@ -8,6 +8,29 @@
   z-index: 100;
 }
 
+.headerSecondary {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: #232f3e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerSecondary_optionLineTwo {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.headerSecondary_optionLast {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-left: 70px;
+}
+
 .header__logo {
   width: 100px;
   object-fit: contain;
@@ -40,8 +63,8 @@
 }
 
 .header_optionLineTwo {
-  font-size: 13px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .header__optionBasket {

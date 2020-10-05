@@ -11,6 +11,9 @@ import Payment from "./Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import Orders from "./Orders";
+import Footer from "./Footer";
+import Register from "./Register";
+import FooterLogin from "./FooterLogin";
 
 const promise = loadStripe(
   "pk_test_51HW2EnCRlwJlGJf5BiIJFw2qFX6UimCYXHFiRLTb9Qa8Vc6pQIK3AWUrWrOcfWtFjRPXJ57vzjyZ1M1xYIyF16YL00sj5Exqv4"
@@ -45,15 +48,22 @@ function App() {
 
   return (
     // BEM
+
     <Router>
       <div className="app">
         <Switch>
           <Route path="/orders">
             <Header />
             <Orders />
+            <Footer />
           </Route>
           <Route path="/login">
             <Login />
+            <FooterLogin />
+          </Route>
+          <Route path="/register">
+            <Register />
+            <FooterLogin />
           </Route>
           <Route path="/checkout">
             <Header />
@@ -68,6 +78,7 @@ function App() {
           <Route path="/">
             <Header />
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </div>

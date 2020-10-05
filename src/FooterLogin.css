@@ -1,0 +1,24 @@
+.footerLogin {
+  max-height: 100px;
+  position: fixed;
+  left: 0;
+  bottom: 15px;
+  width: 100%;
+}
+
+hr {
+  border: none;
+  height: 20px;
+  width: 90%;
+  height: 50px;
+  margin-top: 0;
+  box-shadow: 0 15px 10px -20px #333;
+  margin: -50px auto 20px;
+}
+
+.centered {
+  /* height: 100vh; Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
