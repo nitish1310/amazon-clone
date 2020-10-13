@@ -24,8 +24,8 @@ The features include:
 To run the application locally; clone the repo, install dependencies and run the app.
 
 ```
-$ git clone https://github.com/nitish1310/Slack-Clone
-$ cd Slack-Clone
+$ git clone https://github.com/nitish1310/amazon-clone
+$ cd amazon-clone
 $ yarn && yarn start
 ```
 
