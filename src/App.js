@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
@@ -14,6 +14,8 @@ import Orders from "./Orders";
 import Footer from "./Footer";
 import Register from "./Register";
 import FooterLogin from "./FooterLogin";
+import alanBtn from "@alan-ai/alan-sdk-web";
+import ProductLists from "./ProductLists";
 
 const promise = loadStripe(
   "pk_test_51HW2EnCRlwJlGJf5BiIJFw2qFX6UimCYXHFiRLTb9Qa8Vc6pQIK3AWUrWrOcfWtFjRPXJ57vzjyZ1M1xYIyF16YL00sj5Exqv4"
@@ -22,9 +24,24 @@ const promise = loadStripe(
 function App() {
   //contect API
   const [{}, dispatch] = useStateValue();
+  const [allProductList, setAllProductList] = useState([]);
 
   useEffect(() => {
     //It will only run once when the app component loads
+
+    const alanKey =
+      "55eb76a3057fcd338bfd886a91be72b92e956eca572e1d8b807a3e2338fdd0dc/stage";
+
+    alanBtn({
+      key: alanKey,
+      onCommand: ({ command, productList }) => {
+        if (command === "newProducts") {
+          console.log(productList);
+          setAllProductList(productList);
+        }
+      },
+    });
+
     //Attach this listner after load
     auth.onAuthStateChanged((authUser) => {
       console.log("THE USER IS >>> ", authUser);
@@ -74,6 +91,11 @@ function App() {
             <Elements stripe={promise}>
               <Payment />
             </Elements>
+          </Route>
+          <Route path="/product">
+            <Header />
+            <ProductLists productLists={allProductList} />
+            <Footer />
           </Route>
           <Route path="/">
             <Header />
