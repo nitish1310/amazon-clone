@@ -4,10 +4,12 @@ import { Grid, Grow, Typography } from "@material-ui/core";
 import "./ProductLists.css";
 import ProductRows from "./ProductRows";
 import ItemsCarousel from "react-items-carousel";
+import { useStateValue } from "./StateProvider";
 
 function ProductLists({ productLists }) {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 50;
+
   return (
     <div className="productLists">
       <div className="home__container">

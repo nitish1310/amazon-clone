@@ -27,7 +27,7 @@
   transform: scale(1.04);
 }
 
-.productRow > img {
+.productRow > a > img {
   /* max-height: 200px; */
   /* height: 100%; */
   min-width: 0;

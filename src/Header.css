@@ -4,9 +4,111 @@
   align-items: center;
   background-color: #131921;
   position: sticky;
+  /* position: fixed; */
   top: 0;
+  /* width: 100%; */
   z-index: 100;
+  /* z-index: 3; */
 }
+
+/* menu */
+
+/* .header .header__menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+} */
+
+/* menu icon */
+
+/* .header .header__menuIcon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .header__menuIcon .header__navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .header__menuIcon .header__navicon:before,
+.header .header__menuIcon .header__navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .header__menuIcon .header__navicon:before {
+  top: 5px;
+}
+
+.header .header__menuIcon .header__navicon:after {
+  top: -5px;
+} */
+
+/* menu btn */
+
+/* .header .header__menuBtn {
+  display: none;
+}
+
+.header .header__menuBtn:checked ~ .header__menu {
+  max-height: 240px;
+}
+
+.header .header__menuBtn:checked ~ .header__menuIcon .header__navicon {
+  background: transparent;
+}
+
+.header .header__menuBtn:checked ~ .header__menuIcon .header__navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .header__menuBtn:checked ~ .header__menuIcon .header__navicon:after {
+  transform: rotate(45deg);
+}
+
+.header
+  .header__menuBtn:checked
+  ~ .header__menuIcon:not(.steps)
+  .header__navicon:before,
+.header
+  .header__menuBtn:checked
+  ~ .header__menuIcon:not(.steps)
+  .header__navicon:after {
+  top: 0;
+} */
+
+/* 48em = 768px */
+
+/* @media (min-width: 48em) {
+  .header {
+    float: left;
+  }
+  .header {
+    padding: 20px 30px;
+  }
+  .header .header__menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .header__menuIcon {
+    display: none;
+  }
+} */
 
 .headerSecondary {
   height: 40px;

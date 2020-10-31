@@ -18,12 +18,17 @@ function Header() {
   return (
     <div id="nav-top">
       <div className="header">
+        {/* <div className="header__menu1"> */}
         <Link to="/">
           <img
             className="header__logo"
             src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
           />
         </Link>
+        {/* <input class="header__menuBtn" type="checkbox" id="menu-btn" />
+          <label class="header__menuIcon" for="header__menuBtn">
+            <span class="header__navicon"></span>
+          </label> */}
         <div className="header__search">
           <input className="header__searchInput" type="text" />
           <SearchIcon className="header__searchIcon" />
@@ -60,8 +65,8 @@ function Header() {
             </div>
           </Link>
         </div>
+        {/* </div> */}
       </div>
-
       <div className="headerSecondary">
         <div className="header__nav">
           <div className="header__option">
